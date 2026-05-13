@@ -1,6 +1,6 @@
    @import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap');
 
-   *{
+   * {
        font-family: "Geist", sans-serif;
        margin: 0;
        padding: 0;
@@ -61,6 +61,17 @@
    .main-heading {
        font-size: 48px;
        text-align: center;
+       animation: mk 2s ease-in-out 1s;
+   }
+
+   @keyframes mk {
+       from {
+           scale: 0;
+       }
+
+       to {
+           scale: 1;
+       }
    }
 
    .main-para {
@@ -146,4 +157,38 @@
 
    .search-btn:active {
        transform: scale(0.95);
+   }
+
+   .search-input-wrapper {
+       position: relative;
+       flex-grow: 1;
+       display: flex;
+       align-items: center;
+   }
+
+   #suggestions-list {
+       position: absolute;
+       top: 100%;
+       /* Appears directly below the input */
+       left: 0;
+       width: 100%;
+       background: white;
+       border: 1px solid #ddd;
+       border-top: none;
+       list-style: none;
+       padding: 0;
+       margin: 0;
+       z-index: 9999;
+       border-radius: 0 0 8px 8px;
+       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+       color: #333;
+       text-align: left;
+   }
+
+   #suggestions-list li:hover {
+       background-color: #f0f0f0;
+   }
+
+   .suggestions-hidden {
+       display: none;
    }
