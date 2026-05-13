@@ -20,7 +20,9 @@
 </head>
 
 <body>
-  
+    <div id="navbar-container">
+
+    </div>
     <main>
         <div class="swiper mySwiper">
             <div class="swiper-wrapper">
@@ -53,31 +55,35 @@
             <div class="swiper-button-prev"></div>
         </div>
         <div class="main-detail">
-            <h2>Find Your Perfect Place</h2>
-            <p>
+            <h2 class="main-heading">Find Your Perfect Place</h2>
+            <p class="main-para">
                 Cicero famously orated against his political opponent Lucius Sergius Catilina. Occasionally the first
                 Oration against Catiline is taken for type specimens
             </p>
-            <div>
-                <label for="radio-group">
-                    <input type="radio" name="radio-group" id="for-buy">For Buy
-                    <input type="radio" name="radio-group" id="for-Rent">For Rent
-                </label>
-                <hr>
-                <i class="fa-solid fa-location-dot"></i>
-                <input type="text" placeholder="search for a location">
+            <div class="main-detail-design">
+                <div class="radio-group">
+                    <input type="radio" class="radio" name="radio-group" id="for-buy" checked>
+                    <label for="for-buy">For Buy</label>
+
+                    <input type="radio" class="radio" name="radio-group" id="for-Rent">
+                    <label for="for-Rent">For Rent</label>
+                </div>
+
+                <div class="vertical-line"></div>
+
+                <div class="search-input-wrapper">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <input class="search-bar" type="text" placeholder="Search for a location...">
+                </div>
+
                 <i class="fa-solid fa-sliders"></i>
-                <button><a href="">Search</a></button>
+                <button class="search-btn"><a href="#">Search</a></button>
             </div>
 
         </div>
-
-
-
-
     </main>
+    
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
-    <!-- ssdsdsd -->
     <script>
         var swiper = new Swiper(".mySwiper", {
             slidesPerView: "auto",
@@ -92,7 +98,14 @@
                 clickable: true,
             },
         });
-    </script>
+
+        fetch('Navbar.html')
+            .then(response => {
+                return response.text();
+            })
+            .then(htmlContent => {
+                document.getElementById('navbar-container').innerHTML = htmlContent;
+            })
     </script>
 </body>
 
