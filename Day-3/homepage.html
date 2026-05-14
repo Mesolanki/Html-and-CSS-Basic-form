@@ -12,7 +12,7 @@
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=apps_outage" />
 
     <link rel="icon"
-        href="https://e7.pngegg.com/pngimages/730/10/png-clipart-red-triangle-logo-triangle-angle-emblem-thumbnail.png">
+        href="https://resido-shreethemes.vercel.app/static/media/logo.1d96876acb9e2ccab8dd63a9a1670cde.svg">
     </link>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
 
@@ -84,7 +84,93 @@
 
         </div>
     </main>
+  <section class="gallery-section">
+    <h2 class="section-title">Featured Properties</h2>
+    <p style="margin-bottom: 40px; color: #666;">Explore our most popular listings available for immediate viewing.</p>
 
+    <div class="gallery-grid">
+        <div class="gallery-item">
+            <div class="property-tag tag-buy">For Sale</div>
+            <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=800&q=80" alt="Modern Villa">
+            <div class="gallery-overlay">
+                <div class="overlay-info">
+                    <h4>Modern Sunset Villa</h4>
+                    <p>Los Angeles, CA</p>
+                    <span class="price">$1,250,000</span>
+                </div>
+                <button class="view-btn">View Details</button>
+            </div>
+        </div>
+
+        <div class="gallery-item">
+            <div class="property-tag tag-rent">For Rent</div>
+            <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80" alt="Luxury Apartment">
+            <div class="gallery-overlay">
+                <div class="overlay-info">
+                    <h4>Skyline Penthouse</h4>
+                    <p>New York, NY</p>
+                    <span class="price">$4,500 / mo</span>
+                </div>
+                <button class="view-btn">View Details</button>
+            </div>
+        </div>
+
+        <div class="gallery-item">
+            <div class="property-tag tag-buy">For Sale</div>
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Family Home">
+            <div class="gallery-overlay">
+                <div class="overlay-info">
+                    <h4>Green Valley Estate</h4>
+                    <p>Austin, TX</p>
+                    <span class="price">$890,000</span>
+                </div>
+                <button class="view-btn">View Details</button>
+            </div>
+        </div>
+
+        <div class="gallery-item">
+            <div class="property-tag tag-rent">For Rent</div>
+            <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=800&q=80" alt="Studio Loft">
+            <div class="gallery-overlay">
+                <div class="overlay-info">
+                    <h4>Urban Studio Loft</h4>
+                    <p>Chicago, IL</p>
+                    <span class="price">$2,100 / mo</span>
+                </div>
+                <button class="view-btn">View Details</button>
+            </div>
+        </div>
+
+        <div class="gallery-item">
+            <div class="property-tag tag-buy">For Sale</div>
+            <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=800&q=80" alt="Classic Manor">
+            <div class="gallery-overlay">
+                <div class="overlay-info">
+                    <h4>Heritage Manor</h4>
+                    <p>Boston, MA</p>
+                    <span class="price">$2,400,000</span>
+                </div>
+                <button class="view-btn">View Details</button>
+            </div>
+        </div>
+
+        <div class="gallery-item">
+            <div class="property-tag tag-rent">For Rent</div>
+            <img src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?auto=format&fit=crop&w=800&q=80" alt="Modern Flat">
+            <div class="gallery-overlay">
+                <div class="overlay-info">
+                    <h4>Minimalist Flat</h4>
+                    <p>Seattle, WA</p>
+                    <span class="price">$3,200 / mo</span>
+                </div>
+                    <button class="view-btn">View Details</button>
+            </div>
+        </div>
+    </div>
+</section>
+    <div ID="Footer-Container">
+
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script>
         var swiper = new Swiper(".mySwiper", {
@@ -108,54 +194,13 @@
             .then(htmlContent => {
                 document.getElementById('navbar-container').innerHTML = htmlContent;
             })
-
-        const input = document.getElementsByClassName('search-bar')[0];
-        const list = document.getElementById('suggestions-list');
-        let debounceTimer;
-
-        input.addEventListener('input', () => {
-            clearTimeout(debounceTimer);
-            const query = input.value.trim();
-
-            if (query.length < 3) {
-                list.innerHTML = '';
-                list.classList.add('suggestions-hidden');
-                return;
-            }
-
-            debounceTimer = setTimeout(() => {
-                fetch(`https://photon.komoot.io/api/?q=${encodeURIComponent(query)}&limit=5`)
-                    .then(response => response.json())
-                    .then(data => {
-                        list.innerHTML = '';
-                        if (!data.features || data.features.length === 0) {
-                            list.classList.add('suggestions-hidden');
-                            return;
-                        }
-
-                        data.features.forEach(feature => {
-                            const props = feature.properties;
-                            const name = props.name || '';
-                            const city = props.city ? `, ${props.city}` : '';
-                            const country = props.country ? `, ${props.country}` : '';
-                            const fullAddress = `${name}${city}${country}`;
-
-                            const li = document.createElement('li');
-                            li.textContent = fullAddress;
-                            li.style.padding = "10px";
-                            li.style.cursor = "pointer";
-
-                            li.addEventListener('click', () => {
-                                input.value = fullAddress;
-                                list.innerHTML = '';
-                                list.classList.add('suggestions-hidden');
-                            });
-                            list.appendChild(li);
-                        });
-                        list.classList.remove('suggestions-hidden');
-                    });
-            }, 300);
-        });
+        fetch('Footer.html')
+            .then(response => {
+                return response.text();
+            })
+            .then(htmlContent => {
+                document.getElementById('Footer-Container').innerHTML = htmlContent;
+            })
 
     </script>
 </body>

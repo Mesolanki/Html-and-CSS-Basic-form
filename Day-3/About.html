@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us |Resido</title>
+
+    <link rel="icon"
+        href="https://resido-shreethemes.vercel.app/static/media/logo.1d96876acb9e2ccab8dd63a9a1670cde.svg">
+    </link>
+    <link rel="stylesheet" href="./About.css">
+</head>
+
+<body>
+    <div id="navbar-container"></div>
+    <header class="hero">
+        <h1>Your Key to a Better Life</h1>
+        <p>Expert guidance and a seamless experience for buying, selling, or renting properties.</p>
+    </header>
+
+    <section class="section">
+        <div class="story-container">
+            <div class="story-content">
+                <h2 class="section-title">Our Story</h2>
+                <p>Since 2015, we have been more than just a real estate agency. We are a team of passionate
+                    individuals dedicated to helping you find the place where your life unfolds. We started with a
+                    small office and a big dream: to make real estate transparent and accessible for everyone.</p>
+                <p style="margin-top: 15px;">Today, we boast a portfolio of thousands of properties across the
+                    country, ranging from urban apartments to sprawling countryside estates. Our commitment to
+                    integrity and customer satisfaction remains unchanged.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section values-section">
+        <h2 class="section-title" style="display: inline-block;">Why Trust Us?</h2>
+        <div class="values-grid">
+            <div class="value-card">
+                <h3>Integrity</h3>
+                <p>We operate with complete honesty. What you see in our listings is exactly what you get on the
+                    ground.</p>
+            </div>
+            <div class="value-card">
+                <h3>Expertise</h3>
+                <p>Our agents are highly trained professionals who know the market trends better than anyone else.
+                </p>
+            </div>
+            <div class="value-card">
+                <h3>Community</h3>
+                <p>We don't just sell houses; we build neighborhoods. We take pride in contributing to the
+                    communities we serve.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section mission-section">
+        <div class="mission-grid">
+            <div class="mission-text">
+                <h2>Our Mission</h2>
+                <p>Our mission is to simplify the real estate process through innovation and personalized service.
+                    We aim to empower buyers and renters by providing them with the tools and information they need
+                    to move forward with confidence.</p>
+            </div>
+            <div class="mission-text">
+                <h2>Our Vision</h2>
+                <p>We envision a world where finding a home is a joyful, stress-free experience. By leveraging
+                    technology and local expertise, we strive to be the most trusted name in housing services
+                    globally.</p>
+            </div>
+        </div>
+    </section>
+    <div id="footer-container"></div>
+    <script>
+        fetch('Navbar.Html')
+            .then(response => response.text())
+            .then(data => document.getElementById('navbar-container').innerHTML = data)
+        fetch('Footer.Html')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer-container').innerHTML = data)
+    </script>
+</body>
+
+</html>

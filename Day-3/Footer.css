@@ -1,0 +1,101 @@
+
+.footer-main {
+    background-color: #001233;
+    color: white;
+    padding: 60px 20px;
+    font-family: sans-serif;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+
+.footer-brand {
+    flex: 1;
+    min-width: 250px;
+}
+
+.logo img {
+    height: 40px;
+    margin-bottom: 20px;
+}
+
+.footer-content p {
+    color: #adb5bd;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+.footer-copyright {
+    margin-top: 20px;
+    font-size: 0.8rem !important;
+}
+
+
+.footer-links-wrapper {
+    display: flex;
+    flex: 2;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.link-column h3 {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.link-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.link-column ul li {
+    margin-bottom: 12px;
+}
+
+.link-column ul li a {
+    color: #adb5bd;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.link-column ul li a:hover {
+    color: #0353a4;
+}
+
+
+.sign-up {
+    background-color: #0353a4;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.2s ease;
+}
+
+.sign-up:hover {
+    transform: scale(1.05);
+    background-color: #5c677d;
+}
+
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer-links-wrapper {
+        justify-content: center;
+    }
+}

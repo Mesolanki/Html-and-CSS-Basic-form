@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Resido</title>
+    <link rel="stylesheet" href="Signup.css">
+    
+</head>
+<body>
+    <div id="navbar-container"></div>
+    
+    <div class="container">
+        <div class="login-card">
+            <div class="logo-container">
+                <div class="logo-data">
+                    <h3>Create an Account</h3>
+                </div>
+            </div>
+
+            <form id="signup-form">
+                <div class="form-group">
+                    <label for="full-name">Full Name</label>
+                    <input type="text" id="full-name" placeholder="John Doe" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" placeholder="name@example.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="*******" required>
+                </div>
+
+                <button type="submit" class="btn-login">Sign Up</button>
+            </form>
+
+            <div class="form-footer">
+                <p>Already have an account? <a href="Login.html">Sign In</a></p>
+            </div>
+        </div>
+    </div>
+
+    <div id="Footer-Container"></div>
+
+    <script>
+        fetch('Navbar.html')
+            .then(res => res.text())
+            .then(html => document.getElementById('navbar-container').innerHTML = html);
+            
+        fetch('Footer.html')
+            .then(res => res.text())
+            .then(html => document.getElementById('Footer-Container').innerHTML = html);
+    </script>
+</body>
+</html>
