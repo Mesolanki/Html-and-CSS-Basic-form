@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Listings - Resido</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="Navbar.css">
+    <link rel="stylesheet" href="Footer.css">
+    <link rel="stylesheet" href="Listing.css">
+    <link rel="icon" href="https://resido-shreethemes.vercel.app/static/media/logo.1d96876acb9e2ccab8dd63a9a1670cde.svg">
+</head>
+<body>
+    <header class="navbar-premium">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="homepage.html">
+                    <img src="https://resido-shreethemes.vercel.app/static/media/logo.1d96876acb9e2ccab8dd63a9a1670cde.svg" alt="Resido Logo">
+                </a>
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="homepage.html">Home</a></li>
+                    <li><a href="About.html">About</a></li>
+                    <li><a href="Listing.html">Listings</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="nav-buttons">
+                <a href="Login.html" class="btn-auth">
+                    <i class="fa-solid fa-user"></i> Login / Signup
+                </a>
+                <a href="PostProperty.html" class="btn-primary">
+                    <i class="fa-solid fa-plus"></i> Post Property
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <div class="page-header">
+        <h1>Property Listings</h1>
+        <p>Explore our premium selection of homes, apartments, and commercial spaces.</p>
+    </div>
+
+    <main class="listing-main">
+        <div class="listing-container">
+            
+            <aside class="sidebar-filter">
+                <div class="filter-widget">
+                    <h3>Search Properties</h3>
+                    <div class="search-input">
+                        <i class="fa-solid fa-search"></i>
+                        <input type="text" placeholder="Enter keyword...">
+                    </div>
+                </div>
+
+                <div class="filter-widget">
+                    <h3>Property Status</h3>
+                    <div class="radio-filter">
+                        <label><input type="radio" name="status" checked> Any Status</label>
+                        <label><input type="radio" name="status"> For Sale</label>
+                        <label><input type="radio" name="status"> For Rent</label>
+                    </div>
+                </div>
+
+                <div class="filter-widget">
+                    <h3>Property Type</h3>
+                    <div class="checkbox-filter">
+                        <label><input type="checkbox"> House (42)</label>
+                        <label><input type="checkbox"> Apartment (28)</label>
+                        <label><input type="checkbox"> Villa (15)</label>
+                        <label><input type="checkbox"> Commercial (8)</label>
+                    </div>
+                </div>
+
+                <div class="filter-widget">
+                    <h3>Price Range</h3>
+                    <div class="price-inputs">
+                        <input type="number" placeholder="Min $">
+                        <span>-</span>
+                        <input type="number" placeholder="Max $">
+                    </div>
+                </div>
+                
+                <button class="btn-apply-filter">Apply Filters</button>
+            </aside>
+
+            <section class="gallery-content">
+                <div class="gallery-controls">
+                    <p>Showing 1–12 of 120 results</p>
+                    <select>
+                        <option>Sort by Default</option>
+                        <option>Price: Low to High</option>
+                        <option>Price: High to Low</option>
+                        <option>Newest First</option>
+                    </select>
+                </div>
+
+                <div class="gallery-grid">
+
+                    <div class="gallery-item">
+                        <div class="property-tag tag-buy">For Sale</div>
+                        <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=800&q=80" alt="Modern Villa">
+                        <div class="gallery-overlay">
+                            <div class="overlay-info">
+                                <h4>Modern Sunset Villa</h4>
+                                <p><i class="fa-solid fa-location-dot"></i> Los Angeles, CA</p>
+                                <span class="price">$1,250,000</span>
+                            </div>
+                            <a href="ViewDetails.html" class="view-btn">View Details</a>
+                        </div>
+                    </div>
+
+
+                    <div class="gallery-item">
+                        <div class="property-tag tag-rent">For Rent</div>
+                        <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80" alt="Luxury Apartment">
+                        <div class="gallery-overlay">
+                            <div class="overlay-info">
+                                <h4>Skyline Penthouse</h4>
+                                <p><i class="fa-solid fa-location-dot"></i> New York, NY</p>
+                                <span class="price">$4,500 / mo</span>
+                            </div>
+                            <a href="ViewDetails.html" class="view-btn">View Details</a>
+                        </div>
+                    </div>
+
+
+                    <div class="gallery-item">
+                        <div class="property-tag tag-buy">For Sale</div>
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Family Home">
+                        <div class="gallery-overlay">
+                            <div class="overlay-info">
+                                <h4>Green Valley Estate</h4>
+                                <p><i class="fa-solid fa-location-dot"></i> Austin, TX</p>
+                                <span class="price">$890,000</span>
+                            </div>
+                            <a href="ViewDetails.html" class="view-btn">View Details</a>
+                        </div>
+                    </div>
+
+
+                    <div class="gallery-item">
+                        <div class="property-tag tag-rent">For Rent</div>
+                        <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=800&q=80" alt="Studio Loft">
+                        <div class="gallery-overlay">
+                            <div class="overlay-info">
+                                <h4>Urban Studio Loft</h4>
+                                <p><i class="fa-solid fa-location-dot"></i> Chicago, IL</p>
+                                <span class="price">$2,100 / mo</span>
+                            </div>
+                            <a href="ViewDetails.html" class="view-btn">View Details</a>
+                        </div>
+                    </div>
+
+
+                    <div class="gallery-item">
+                        <div class="property-tag tag-buy">For Sale</div>
+                        <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=800&q=80" alt="Classic Manor">
+                        <div class="gallery-overlay">
+                            <div class="overlay-info">
+                                <h4>Heritage Manor</h4>
+                                <p><i class="fa-solid fa-location-dot"></i> Boston, MA</p>
+                                <span class="price">$2,400,000</span>
+                            </div>
+                            <a href="ViewDetails.html" class="view-btn">View Details</a>
+                        </div>
+                    </div>
+
+
+                    <div class="gallery-item">
+                        <div class="property-tag tag-rent">For Rent</div>
+                        <img src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?auto=format&fit=crop&w=800&q=80" alt="Modern Flat">
+                        <div class="gallery-overlay">
+                            <div class="overlay-info">
+                                <h4>Minimalist Flat</h4>
+                                <p><i class="fa-solid fa-location-dot"></i> Seattle, WA</p>
+                                <span class="price">$3,200 / mo</span>
+                            </div>
+                            <a href="ViewDetails.html" class="view-btn">View Details</a>
+                        </div>
+                    </div>
+
+
+                    <div class="gallery-item">
+                        <div class="property-tag tag-buy">For Sale</div>
+                        <img src="https://images.unsplash.com/photo-1583608205776-bfd35f0d9f83?auto=format&fit=crop&w=800&q=80" alt="Suburban House">
+                        <div class="gallery-overlay">
+                            <div class="overlay-info">
+                                <h4>Suburban Family Home</h4>
+                                <p><i class="fa-solid fa-location-dot"></i> Dallas, TX</p>
+                                <span class="price">$560,000</span>
+                            </div>
+                            <a href="ViewDetails.html" class="view-btn">View Details</a>
+                        </div>
+                    </div>
+
+
+                    <div class="gallery-item">
+                        <div class="property-tag tag-rent">For Rent</div>
+                        <img src="https://images.unsplash.com/photo-1449844908441-8829872d2607?auto=format&fit=crop&w=800&q=80" alt="Downtown Apartment">
+                        <div class="gallery-overlay">
+                            <div class="overlay-info">
+                                <h4>Downtown City View</h4>
+                                <p><i class="fa-solid fa-location-dot"></i> Miami, FL</p>
+                                <span class="price">$3,800 / mo</span>
+                            </div>
+                            <a href="ViewDetails.html" class="view-btn">View Details</a>
+                        </div>
+                    </div>
+
+
+                    <div class="gallery-item">
+                        <div class="property-tag tag-buy">For Sale</div>
+                        <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80" alt="Modern Home">
+                        <div class="gallery-overlay">
+                            <div class="overlay-info">
+                                <h4>Glass Architecture Home</h4>
+                                <p><i class="fa-solid fa-location-dot"></i> Portland, OR</p>
+                                <span class="price">$1,100,000</span>
+                            </div>
+                            <a href="ViewDetails.html" class="view-btn">View Details</a>
+                        </div>
+                    </div>
+
+
+                    <div class="gallery-item">
+                        <div class="property-tag tag-buy">For Sale</div>
+                        <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=800&q=80" alt="Beachfront Villa">
+                        <div class="gallery-overlay">
+                            <div class="overlay-info">
+                                <h4>Beachfront Paradise</h4>
+                                <p><i class="fa-solid fa-location-dot"></i> Malibu, CA</p>
+                                <span class="price">$5,200,000</span>
+                            </div>
+                            <a href="ViewDetails.html" class="view-btn">View Details</a>
+                        </div>
+                    </div>
+
+
+                    <div class="gallery-item">
+                        <div class="property-tag tag-rent">For Rent</div>
+                        <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=800&q=80" alt="Modern Kitchen">
+                        <div class="gallery-overlay">
+                            <div class="overlay-info">
+                                <h4>Chef's Dream Apartment</h4>
+                                <p><i class="fa-solid fa-location-dot"></i> San Francisco, CA</p>
+                                <span class="price">$5,000 / mo</span>
+                            </div>
+                            <a href="ViewDetails.html" class="view-btn">View Details</a>
+                        </div>
+                    </div>
+
+
+                    <div class="gallery-item">
+                        <div class="property-tag tag-buy">For Sale</div>
+                        <img src="https://images.unsplash.com/photo-1416331108676-a22ccb276e35?auto=format&fit=crop&w=800&q=80" alt="Cozy Cottage">
+                        <div class="gallery-overlay">
+                            <div class="overlay-info">
+                                <h4>Rustic Mountain Cabin</h4>
+                                <p><i class="fa-solid fa-location-dot"></i> Aspen, CO</p>
+                                <span class="price">$950,000</span>
+                            </div>
+                            <a href="ViewDetails.html" class="view-btn">View Details</a>
+                        </div>
+                    </div>
+
+                </div>
+                
+                <div class="pagination">
+                    <button class="page-btn active">1</button>
+                    <button class="page-btn">2</button>
+                    <button class="page-btn">3</button>
+                    <button class="page-btn"><i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer-premium">
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <img src="https://resido-shreethemes.vercel.app/static/media/logo.1d96876acb9e2ccab8dd63a9a1670cde.svg" alt="Resido Logo" class="footer-logo">
+                    <p>Resido is your trusted partner in finding the perfect property. We offer an exclusive selection of premium homes and unmatched service.</p>
+                    <div class="footer-socials">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links-group">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="homepage.html">Home</a></li>
+                        <li><a href="About.html">About Us</a></li>
+                        <li><a href="Listing.html">Listings</a></li>
+                        <li><a href="Contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links-group">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-newsletter">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to our newsletter to receive updates on new properties.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Email Address" required>
+                        <button type="submit"><i class="fa-solid fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Resido Real Estate. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

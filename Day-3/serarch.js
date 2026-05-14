@@ -1,48 +1,58 @@
 const input = document.getElementsByClassName('search-bar')[0];
-
 const list = document.getElementById('suggestions-list');
-let debounceTimer;
+
+const locations = [
+    "New York, NY",
+    "Los Angeles, CA",
+    "Miami, FL",
+    "Chicago, IL",
+    "Boston, MA",
+    "Seattle, WA",
+    "Austin, TX",
+    "Dallas, TX",
+    "Portland, OR",
+    "San Francisco, CA",
+    "Malibu, CA",
+    "Aspen, CO",
+    "Beverly Hills, CA"
+];
 
 input.addEventListener('input', () => {
-    clearTimeout(debounceTimer);
-    const query = input.value.trim();
+    const query = input.value.trim().toLowerCase();
 
-    if (query.length < 3) {
+    if (query.length < 1) {
         list.innerHTML = '';
         list.classList.add('suggestions-hidden');
         return;
     }
 
-    debounceTimer = setTimeout(() => {
-        fetch(`https://photon.komoot.io/api/?q=${encodeURIComponent(query)}&limit=5`)
-            .then(response => response.json())
-            .then(data => {
-                list.innerHTML = '';
-                if (!data.features || data.features.length === 0) {
-                    list.classList.add('suggestions-hidden');
-                    return;
-                }
+    const filtered = locations.filter(loc => loc.toLowerCase().includes(query));
 
-                data.features.forEach(feature => {
-                    const props = feature.properties;
-                    const name = props.name || '';
-                    const city = props.city ? `, ${props.city}` : '';
-                    const country = props.country ? `, ${props.country}` : '';
-                    const fullAddress = `${name}${city}${country}`;
+    list.innerHTML = '';
+    
+    if (filtered.length === 0) {
+        list.classList.add('suggestions-hidden');
+        return;
+    }
 
-                    const li = document.createElement('li');
-                    li.textContent = fullAddress;
-                    li.style.padding = "10px";
-                    li.style.cursor = "pointer";
+    filtered.forEach(fullAddress => {
+        const li = document.createElement('li');
+        li.textContent = fullAddress;
 
-                    li.addEventListener('click', () => {
-                        input.value = fullAddress;
-                        list.innerHTML = '';
-                        list.classList.add('suggestions-hidden');
-                    });
-                    list.appendChild(li);
-                });
-                list.classList.remove('suggestions-hidden');
-            });
-    }, 300);
+        li.addEventListener('click', () => {
+            input.value = fullAddress;
+            list.innerHTML = '';
+            list.classList.add('suggestions-hidden');
+        });
+        list.appendChild(li);
+    });
+    
+    list.classList.remove('suggestions-hidden');
+});
+
+// Hide list when clicking outside
+document.addEventListener('click', (e) => {
+    if (!input.contains(e.target) && !list.contains(e.target)) {
+        list.classList.add('suggestions-hidden');
+    }
 });

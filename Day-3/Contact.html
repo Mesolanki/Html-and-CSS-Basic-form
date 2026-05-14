@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Resido</title>
+    <title>Contact Us - Resido</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="Login.css">
+    <link rel="stylesheet" href="Contact.css">
     <link rel="stylesheet" href="Navbar.css">
     <link rel="stylesheet" href="Footer.css">
     <link rel="icon" href="https://resido-shreethemes.vercel.app/static/media/logo.1d96876acb9e2ccab8dd63a9a1670cde.svg">
@@ -36,58 +36,77 @@
             </div>
         </div>
     </header>
-    
-    <main class="auth-main">
-        <div class="auth-container">
-            <div class="auth-image">
-                <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=800&q=80" alt="Modern House">
-                <div class="auth-image-overlay">
-                    <h2>Welcome Back</h2>
-                    <p>Log in to access your saved properties, manage your listings, and connect with agents.</p>
+
+    <div class="contact-header">
+        <h1>Get In Touch</h1>
+        <p>Have questions about a property or need help finding your dream home? We're here to help.</p>
+    </div>
+
+    <main class="contact-main">
+        <div class="contact-info-cards">
+            <div class="info-card">
+                <div class="icon-circle">
+                    <i class="fa-solid fa-location-dot"></i>
                 </div>
+                <h3>Office Address</h3>
+                <p>123 Real Estate Blvd, Suite 100<br>Los Angeles, CA 90001</p>
             </div>
-            <div class="auth-form-wrapper">
-                <div class="auth-form-container">
-                    <div class="logo-container">
-                        <img src="https://resido-shreethemes.vercel.app/static/media/logo.1d96876acb9e2ccab8dd63a9a1670cde.svg" alt="Resido Logo" class="auth-logo">
-                    </div>
-                    
-                    <h3>Sign In to Resido</h3>
-                    <p class="auth-subtitle">Enter your credentials to proceed.</p>
-
-                    <form id="login-form">
-                        <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <div class="input-with-icon">
-                                <i class="fa-regular fa-envelope"></i>
-                                <input type="email" id="email" placeholder="name@example.com" required>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="password">Password</label>
-                            <div class="input-with-icon">
-                                <i class="fa-solid fa-lock"></i>
-                                <input type="password" id="password" placeholder="••••••••" required>
-                            </div>
-                        </div>
-
-                        <div class="form-options">
-                            <label class="remember-me">
-                                <input type="checkbox"> 
-                                <span class="checkmark"></span>
-                                Remember Me
-                            </label>
-                            <a href="#" class="forgot-pass">Forgot Password?</a>
-                        </div>
-
-                        <button type="submit" class="btn-auth-submit">Sign In</button>
-                    </form>
-
-                    <div class="form-footer">
-                        <p>Don't have an account? <a href="Signup.html">Sign Up here</a></p>
-                    </div>
+            
+            <div class="info-card">
+                <div class="icon-circle">
+                    <i class="fa-solid fa-phone"></i>
                 </div>
+                <h3>Phone Number</h3>
+                <p>+1 (555) 123-4567<br>+1 (555) 987-6543</p>
+            </div>
+            
+            <div class="info-card">
+                <div class="icon-circle">
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+                <h3>Email Address</h3>
+                <p>info@resido.com<br>support@resido.com</p>
+            </div>
+        </div>
+
+        <div class="contact-content">
+            <div class="contact-form-section">
+                <h2>Send Us A Message</h2>
+                <form class="contact-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>First Name</label>
+                            <input type="text" placeholder="John" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Last Name</label>
+                            <input type="text" placeholder="Doe" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Email Address</label>
+                            <input type="email" placeholder="john@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Phone Number</label>
+                            <input type="tel" placeholder="(555) 123-4567">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Subject</label>
+                        <input type="text" placeholder="How can we help you?" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Message</label>
+                        <textarea rows="5" placeholder="Write your message here..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">Send Message</button>
+                </form>
+            </div>
+            
+            <div class="map-section">
+                <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=800&q=80" alt="Map Location" class="map-placeholder">
             </div>
         </div>
     </main>

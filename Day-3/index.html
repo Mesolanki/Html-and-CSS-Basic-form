@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resido - Premium Real Estate</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="homepage.css">
+    <link rel="stylesheet" href="Navbar.css">
+    <link rel="stylesheet" href="Footer.css">
+    <link rel="icon" href="https://resido-shreethemes.vercel.app/static/media/logo.1d96876acb9e2ccab8dd63a9a1670cde.svg">
+</head>
+
+<body>
+    <div id="welcome-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="close-modal" id="close-modal-btn">&times;</button>
+            <div class="modal-icon">
+                <i class="fa-solid fa-house-chimney-window"></i>
+            </div>
+            <h2>Welcome to Resido!</h2>
+            <p>Discover the finest properties hand-picked for you. Start your journey to find your perfect home today.</p>
+            <button class="btn-primary-modal" id="start-explore-btn">Start Exploring</button>
+        </div>
+    </div>
+
+    <header class="navbar-premium">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="homepage.html">
+                    <img src="https://resido-shreethemes.vercel.app/static/media/logo.1d96876acb9e2ccab8dd63a9a1670cde.svg" alt="Resido Logo">
+                </a>
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="homepage.html">Home</a></li>
+                    <li><a href="About.html">About</a></li>
+                    <li><a href="Listing.html">Listings</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="nav-buttons">
+                <a href="Login.html" class="btn-auth">
+                    <i class="fa-solid fa-user"></i> Login / Signup
+                </a>
+                <a href="PostProperty.html" class="btn-primary">
+                    <i class="fa-solid fa-plus"></i> Post Property
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=2000&q=80" alt="House"></div>
+                <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=2000&q=80" alt="House"></div>
+                <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=2000&q=80" alt="House"></div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+
+        <div class="main-detail glass-search-panel">
+            <h2 class="main-heading">Find Your Perfect Place</h2>
+            <p class="main-para">
+                Discover exceptional homes, luxury villas, and premium apartments curated just for you.
+            </p>
+            <div class="main-detail-design">
+                <div class="radio-group">
+                    <input type="radio" class="radio" name="radio-group" id="for-buy" checked>
+                    <label for="for-buy">Buy</label>
+
+                    <input type="radio" class="radio" name="radio-group" id="for-Rent">
+                    <label for="for-Rent">Rent</label>
+                </div>
+
+                <div class="vertical-line"></div>
+
+                <div class="search-input-wrapper">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <input class="search-bar" type="text" placeholder="Search for a location...">
+                </div>
+                <ul id="suggestions-list" class="suggestions-hidden"></ul>
+
+                <i class="fa-solid fa-sliders filter-icon"></i>
+                <a href="#" class="search-btn">Search</a>
+            </div>
+        </div>
+    </main>
+
+    <section class="gallery-section" id="listing">
+        <h2 class="section-title">Featured Properties</h2>
+        <p class="section-subtitle">Explore our most popular listings available for immediate viewing.</p>
+
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <div class="property-tag tag-buy">For Sale</div>
+                <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=800&q=80" alt="Modern Villa">
+                <div class="gallery-overlay">
+                    <div class="overlay-info">
+                        <h4>Modern Sunset Villa</h4>
+                        <p><i class="fa-solid fa-location-dot"></i> Los Angeles, CA</p>
+                        <span class="price">$1,250,000</span>
+                    </div>
+                    <a href="ViewDetails.html" class="view-btn">View Details</a>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <div class="property-tag tag-rent">For Rent</div>
+                <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80" alt="Luxury Apartment">
+                <div class="gallery-overlay">
+                    <div class="overlay-info">
+                        <h4>Skyline Penthouse</h4>
+                        <p><i class="fa-solid fa-location-dot"></i> New York, NY</p>
+                        <span class="price">$4,500 / mo</span>
+                    </div>
+                    <a href="ViewDetails.html" class="view-btn">View Details</a>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <div class="property-tag tag-buy">For Sale</div>
+                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Family Home">
+                <div class="gallery-overlay">
+                    <div class="overlay-info">
+                        <h4>Green Valley Estate</h4>
+                        <p><i class="fa-solid fa-location-dot"></i> Austin, TX</p>
+                        <span class="price">$890,000</span>
+                    </div>
+                    <a href="ViewDetails.html" class="view-btn">View Details</a>
+                </div>
+            </div>
+            
+            <div class="gallery-item">
+                <div class="property-tag tag-rent">For Rent</div>
+                <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=800&q=80" alt="Studio Loft">
+                <div class="gallery-overlay">
+                    <div class="overlay-info">
+                        <h4>Urban Studio Loft</h4>
+                        <p><i class="fa-solid fa-location-dot"></i> Chicago, IL</p>
+                        <span class="price">$2,100 / mo</span>
+                    </div>
+                    <a href="ViewDetails.html" class="view-btn">View Details</a>
+                </div>
+            </div>
+            
+            <div class="gallery-item">
+                <div class="property-tag tag-buy">For Sale</div>
+                <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=800&q=80" alt="Classic Manor">
+                <div class="gallery-overlay">
+                    <div class="overlay-info">
+                        <h4>Heritage Manor</h4>
+                        <p><i class="fa-solid fa-location-dot"></i> Boston, MA</p>
+                        <span class="price">$2,400,000</span>
+                    </div>
+                    <a href="ViewDetails.html" class="view-btn">View Details</a>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <div class="property-tag tag-rent">For Rent</div>
+                <img src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?auto=format&fit=crop&w=800&q=80" alt="Modern Flat">
+                <div class="gallery-overlay">
+                    <div class="overlay-info">
+                        <h4>Minimalist Flat</h4>
+                        <p><i class="fa-solid fa-location-dot"></i> Seattle, WA</p>
+                        <span class="price">$3,200 / mo</span>
+                    </div>
+                    <a href="ViewDetails.html" class="view-btn">View Details</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services-section">
+        <h2 class="section-title">Why Choose Us</h2>
+        <p class="section-subtitle">We provide a seamless experience whether you are looking to buy, rent, or sell a property.</p>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fa-solid fa-house-user"></i>
+                </div>
+                <h3>Buy a Home</h3>
+                <p>Find your dream home from our carefully curated premium property listings across the country.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fa-solid fa-key"></i>
+                </div>
+                <h3>Rent a Home</h3>
+                <p>Discover beautiful rental properties that perfectly match your lifestyle and budget requirements.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fa-solid fa-handshake"></i>
+                </div>
+                <h3>Sell a Home</h3>
+                <p>List your property with us and reach millions of potential buyers looking for a home like yours.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="locations-section">
+        <h2 class="section-title">Explore Top Locations</h2>
+        <p class="section-subtitle">Find properties in the most desirable neighborhoods and cities.</p>
+        <div class="locations-grid">
+            <a href="Listing.html" class="location-card wide">
+                <img src="https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?auto=format&fit=crop&w=1000&q=80" alt="New York">
+                <div class="location-overlay">
+                    <h3>New York</h3>
+                    <p>120 Properties</p>
+                </div>
+            </a>
+            <a href="Listing.html" class="location-card">
+                <img src="https://images.unsplash.com/photo-1580659324483-20703f25c7cc?auto=format&fit=crop&w=800&q=80" alt="Los Angeles">
+                <div class="location-overlay">
+                    <h3>Los Angeles</h3>
+                    <p>85 Properties</p>
+                </div>
+            </a>
+            <a href="Listing.html" class="location-card">
+                <img src="https://images.unsplash.com/photo-1533750516457-a7f992034fec?auto=format&fit=crop&w=800&q=80" alt="Miami">
+                <div class="location-overlay">
+                    <h3>Miami</h3>
+                    <p>64 Properties</p>
+                </div>
+            </a>
+            <a href="Listing.html" class="location-card wide">
+                <img src="https://images.unsplash.com/photo-1494522855154-9297ac14b55f?auto=format&fit=crop&w=1000&q=80" alt="Chicago">
+                <div class="location-overlay">
+                    <h3>Chicago</h3>
+                    <p>42 Properties</p>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <section class="testimonials-section">
+        <h2 class="section-title">What Our Clients Say</h2>
+        <p class="section-subtitle">Read success stories from people who found their dream homes through Resido.</p>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p class="review-text">"The team at Resido made finding our new home an absolute breeze. Their curated selection of properties saved us so much time!"</p>
+                <div class="client-info">
+                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=100&q=80" alt="Sarah Jenkins">
+                    <div>
+                        <h4>Sarah Jenkins</h4>
+                        <span>Homebuyer</span>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p class="review-text">"I listed my apartment on Resido and had quality offers within a week. The premium presentation really helps properties stand out."</p>
+                <div class="client-info">
+                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=100&q=80" alt="Michael Chen">
+                    <div>
+                        <h4>Michael Chen</h4>
+                        <span>Property Seller</span>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <p class="review-text">"Exceptional service! The UI is incredibly easy to use, and I was able to filter down to exactly what I was looking for in minutes."</p>
+                <div class="client-info">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=80" alt="Emily Rodriguez">
+                    <div>
+                        <h4>Emily Rodriguez</h4>
+                        <span>Renter</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer-premium">
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <img src="https://resido-shreethemes.vercel.app/static/media/logo.1d96876acb9e2ccab8dd63a9a1670cde.svg" alt="Resido Logo" class="footer-logo">
+                    <p>Resido is your trusted partner in finding the perfect property. We offer an exclusive selection of premium homes and unmatched service.</p>
+                    <div class="footer-socials">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links-group">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="homepage.html">Home</a></li>
+                        <li><a href="About.html">About Us</a></li>
+                        <li><a href="Listing.html">Listings</a></li>
+                        <li><a href="Contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links-group">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-newsletter">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to our newsletter to receive updates on new properties.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Email Address" required>
+                        <button type="submit"><i class="fa-solid fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Resido Real Estate. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="serarch.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: "auto",
+            spaceBetween: 0,
+            loop: true,
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const modal = document.getElementById('welcome-modal');
+            const closeBtn = document.getElementById('close-modal-btn');
+            const exploreBtn = document.getElementById('start-explore-btn');
+
+            if (!sessionStorage.getItem('welcomeShown')) {
+                setTimeout(() => {
+                    modal.classList.add('show-modal');
+                }, 500);
+            }
+
+            const closeModal = () => {
+                modal.classList.remove('show-modal');
+                sessionStorage.setItem('welcomeShown', 'true');
+            };
+
+            closeBtn.addEventListener('click', closeModal);
+            exploreBtn.addEventListener('click', closeModal);
+        });
+    </script>
+</body>
+</html>

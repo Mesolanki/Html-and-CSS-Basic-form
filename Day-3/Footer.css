@@ -1,101 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
 
-.footer-main {
-    background-color: #001233;
-    color: white;
-    padding: 60px 20px;
-    font-family: sans-serif;
+:root {
+    --primary: #0047FF;
+    --primary-hover: #0036cc;
+    --dark: #0f172a;
+    --dark-lighter: #1e293b;
+    --gray: #94a3b8;
+    --white: #ffffff;
+    --border: #334155;
+    --transition: all 0.3s ease;
+}
+
+.footer-premium {
+    background-color: var(--dark);
+    color: var(--white);
+    padding: 80px 0 0;
+    font-family: 'Outfit', sans-serif;
 }
 
 .footer-container {
     max-width: 1200px;
     margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.footer-top {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1.5fr;
     gap: 40px;
+    margin-bottom: 60px;
 }
 
-
-.footer-brand {
-    flex: 1;
-    min-width: 250px;
-}
-
-.logo img {
+.footer-logo {
     height: 40px;
     margin-bottom: 20px;
+    filter: brightness(0) invert(1);
 }
 
-.footer-content p {
-    color: #adb5bd;
+.footer-brand p {
+    color: var(--gray);
     line-height: 1.6;
-    font-size: 0.95rem;
+    margin-bottom: 25px;
+    font-size: 15px;
 }
 
-.footer-copyright {
-    margin-top: 20px;
-    font-size: 0.8rem !important;
-}
-
-
-.footer-links-wrapper {
+.footer-socials {
     display: flex;
-    flex: 2;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 30px;
+    gap: 15px;
 }
 
-.link-column h3 {
-    font-size: 1.1rem;
-    margin-bottom: 20px;
-    color: #ffffff;
+.footer-socials a {
+    width: 40px;
+    height: 40px;
+    background: var(--dark-lighter);
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: var(--transition);
 }
 
-.link-column ul {
+.footer-socials a:hover {
+    background: var(--primary);
+    transform: translateY(-3px);
+}
+
+.footer-links-group h3, .footer-newsletter h3 {
+    font-size: 18px;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+.footer-links-group ul {
     list-style: none;
     padding: 0;
-    margin: 0;
 }
 
-.link-column ul li {
-    margin-bottom: 12px;
+.footer-links-group li {
+    margin-bottom: 15px;
 }
 
-.link-column ul li a {
-    color: #adb5bd;
+.footer-links-group a {
+    color: var(--gray);
     text-decoration: none;
-    transition: color 0.3s ease;
+    transition: var(--transition);
+    font-size: 15px;
 }
 
-.link-column ul li a:hover {
-    color: #0353a4;
+.footer-links-group a:hover {
+    color: var(--primary);
+    padding-left: 5px;
 }
 
+.footer-newsletter p {
+    color: var(--gray);
+    font-size: 15px;
+    margin-bottom: 20px;
+}
 
-.sign-up {
-    background-color: #0353a4;
-    color: white;
+.newsletter-form {
+    display: flex;
+    background: var(--dark-lighter);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.newsletter-form input {
+    background: transparent;
     border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
+    padding: 12px 15px;
+    color: var(--white);
+    width: 100%;
+    outline: none;
+}
+
+.newsletter-form button {
+    background: var(--primary);
+    color: var(--white);
+    border: none;
+    padding: 0 20px;
     cursor: pointer;
-    font-weight: bold;
-    transition: transform 0.2s ease;
+    transition: var(--transition);
 }
 
-.sign-up:hover {
-    transform: scale(1.05);
-    background-color: #5c677d;
+.newsletter-form button:hover {
+    background: var(--primary-hover);
 }
 
+.footer-bottom {
+    border-top: 1px solid var(--border);
+    padding: 25px 0;
+    text-align: center;
+    color: var(--gray);
+    font-size: 14px;
+}
 
-@media (max-width: 768px) {
-    .footer-container {
-        flex-direction: column;
-        text-align: center;
+@media (max-width: 992px) {
+    .footer-top {
+        grid-template-columns: 1fr 1fr;
     }
-    .footer-links-wrapper {
-        justify-content: center;
+}
+
+@media (max-width: 576px) {
+    .footer-top {
+        grid-template-columns: 1fr;
     }
 }

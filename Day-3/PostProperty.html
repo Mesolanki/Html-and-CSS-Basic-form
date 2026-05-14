@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Property - Resido</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="Navbar.css">
+    <link rel="stylesheet" href="Footer.css">
+    <link rel="stylesheet" href="PostProperty.css">
+    <link rel="icon" href="https://resido-shreethemes.vercel.app/static/media/logo.1d96876acb9e2ccab8dd63a9a1670cde.svg">
+</head>
+<body>
+    <header class="navbar-premium">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="homepage.html">
+                    <img src="https://resido-shreethemes.vercel.app/static/media/logo.1d96876acb9e2ccab8dd63a9a1670cde.svg" alt="Resido Logo">
+                </a>
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="homepage.html">Home</a></li>
+                    <li><a href="About.html">About</a></li>
+                    <li><a href="Listing.html">Listings</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="nav-buttons">
+                <a href="Login.html" class="btn-auth">
+                    <i class="fa-solid fa-user"></i> Login / Signup
+                </a>
+                <a href="PostProperty.html" class="btn-primary">
+                    <i class="fa-solid fa-plus"></i> Post Property
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <div class="page-header">
+        <h1>Submit Your Property</h1>
+        <p>Fill out the form below to list your property on Resido and reach thousands of potential buyers or renters.</p>
+    </div>
+
+    <main class="post-property-main">
+        <form class="post-property-form">
+            
+            <div class="form-section">
+                <h2>1. Basic Information</h2>
+                <div class="form-row">
+                    <div class="form-group full-width">
+                        <label>Property Title</label>
+                        <input type="text" placeholder="e.g. Modern Sunset Villa" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Status</label>
+                        <select required>
+                            <option value="">Select Status</option>
+                            <option value="sale">For Sale</option>
+                            <option value="rent">For Rent</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Property Type</label>
+                        <select required>
+                            <option value="">Select Type</option>
+                            <option value="house">House</option>
+                            <option value="apartment">Apartment</option>
+                            <option value="villa">Villa</option>
+                            <option value="commercial">Commercial</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Price ($)</label>
+                        <input type="number" placeholder="e.g. 1500000" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Area (Sq Ft)</label>
+                        <input type="number" placeholder="e.g. 2500" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h2>2. Location Details</h2>
+                <div class="form-row">
+                    <div class="form-group full-width">
+                        <label>Address</label>
+                        <input type="text" placeholder="123 Example Street" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>City</label>
+                        <input type="text" placeholder="Los Angeles" required>
+                    </div>
+                    <div class="form-group">
+                        <label>State</label>
+                        <input type="text" placeholder="CA" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Zip Code</label>
+                        <input type="text" placeholder="90001" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h2>3. Detailed Information</h2>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Bedrooms</label>
+                        <input type="number" placeholder="e.g. 3" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Bathrooms</label>
+                        <input type="number" placeholder="e.g. 2" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Garages</label>
+                        <input type="number" placeholder="e.g. 1" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group full-width">
+                        <label>Description</label>
+                        <textarea rows="6" placeholder="Describe your property in detail..." required></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h2>4. Amenities</h2>
+                <div class="checkbox-grid">
+                    <label class="checkbox-container">Air Conditioning
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="checkbox-container">Swimming Pool
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="checkbox-container">Central Heating
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="checkbox-container">Laundry Room
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="checkbox-container">Gym
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="checkbox-container">Alarm
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="checkbox-container">Window Covering
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="checkbox-container">WiFi
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h2>5. Upload Media</h2>
+                <div class="upload-area">
+                    <i class="fa-solid fa-cloud-arrow-up"></i>
+                    <p>Drag and drop images here, or <span>browse</span></p>
+                    <span class="upload-hint">Supports JPG, PNG (Max 5MB each)</span>
+                </div>
+            </div>
+
+            <div class="submit-section">
+                <button type="submit" class="btn-submit-property">Submit Property Listing</button>
+            </div>
+            
+        </form>
+    </main>
+
+    <footer class="footer-premium">
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <img src="https://resido-shreethemes.vercel.app/static/media/logo.1d96876acb9e2ccab8dd63a9a1670cde.svg" alt="Resido Logo" class="footer-logo">
+                    <p>Resido is your trusted partner in finding the perfect property. We offer an exclusive selection of premium homes and unmatched service.</p>
+                    <div class="footer-socials">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links-group">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="homepage.html">Home</a></li>
+                        <li><a href="About.html">About Us</a></li>
+                        <li><a href="Listing.html">Listings</a></li>
+                        <li><a href="Contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links-group">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-newsletter">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to our newsletter to receive updates on new properties.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Email Address" required>
+                        <button type="submit"><i class="fa-solid fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Resido Real Estate. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
