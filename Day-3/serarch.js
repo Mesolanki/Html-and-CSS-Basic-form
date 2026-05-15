@@ -1,58 +1,25 @@
-const input = document.getElementsByClassName('search-bar')[0];
-const list = document.getElementById('suggestions-list');
+fetch('header.html')
+    .then(response => response.text())
+    .then(data => document.getElementById('header').innerHTML = data)
 
-const locations = [
-    "New York, NY",
-    "Los Angeles, CA",
-    "Miami, FL",
-    "Chicago, IL",
-    "Boston, MA",
-    "Seattle, WA",
-    "Austin, TX",
-    "Dallas, TX",
-    "Portland, OR",
-    "San Francisco, CA",
-    "Malibu, CA",
-    "Aspen, CO",
-    "Beverly Hills, CA"
-];
+fetch('footer.html')
+    .then(response => response.text())
+    .then(data => document.getElementById('footer').innerHTML = data)
 
-input.addEventListener('input', () => {
-    const query = input.value.trim().toLowerCase();
-
-    if (query.length < 1) {
-        list.innerHTML = '';
-        list.classList.add('suggestions-hidden');
-        return;
-    }
-
-    const filtered = locations.filter(loc => loc.toLowerCase().includes(query));
-
-    list.innerHTML = '';
-    
-    if (filtered.length === 0) {
-        list.classList.add('suggestions-hidden');
-        return;
-    }
-
-    filtered.forEach(fullAddress => {
-        const li = document.createElement('li');
-        li.textContent = fullAddress;
-
-        li.addEventListener('click', () => {
-            input.value = fullAddress;
-            list.innerHTML = '';
-            list.classList.add('suggestions-hidden');
-        });
-        list.appendChild(li);
-    });
-    
-    list.classList.remove('suggestions-hidden');
-});
-
-// Hide list when clicking outside
-document.addEventListener('click', (e) => {
-    if (!input.contains(e.target) && !list.contains(e.target)) {
-        list.classList.add('suggestions-hidden');
-    }
+var swiper = new Swiper(".mySwiper", {
+    slidesPerView: "auto",
+    spaceBetween: 0,
+    loop: true,
+    autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+    },
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
 });
